@@ -6,6 +6,8 @@ using std::endl;
 using namespace std;
 int main()
 {
+	int i = 0;
+
     string firstName;
     string weather;
     string emotion;
@@ -15,75 +17,117 @@ int main()
     char choiceAM;
     char choicePM;
     char choiceAfterNoon;
+    char again;
     double time;
 
-    //Questionare for variables that will be used
-    cout << " This story needs for you to finish it! Please complete the prompts." << endl;
-    cout << "What time is it? Please use military time /and/ the period/decimal instead of a colon. (ex: 13.58 is 1:58)" << endl;
-    //double
-    cin >> time; 
-    //string
-    cout << "Please enter a name: " << endl;
-    cin >> firstName;
-    cout << "Please enter a type of weather (ex: snowy, sunny, windy..):" <<endl;
-    cin >> weather;
-    cout << "Please enter an emotion: " << endl;
-    cin >> emotion;
-    cout << "Please enter a /singular/ verb (ex: run, sleep, play..): " << endl;
-    cin >> verb;
-    cout << "Please enter an adverb (ex: quickly, slowly, quietly..): " << endl;
-    cin >> adverb;
-    cout << "Finally, give me a number! " << endl;
-    //int
-    cin >> frequency;
-    if (frequency == 69) {
-        cout << "nice" <<endl;
-    }
-    cout << "Thank you!" << endl;
-    cout << firstName << " is " << emotion << " today, as today is " << weather << "." << endl;
-    cout << weather << " days are perfect for " << verb << "ing, and on " << weather << " days, " << firstName << " is " <<emotion << " to do so." << endl;
-    cout << firstName <<" " << adverb << " " << verb << "s " << frequency << " time(s)." << endl;
-    
-    //choice circumstances are dependent on the time entered previously
-    if (time < 12.00) 
-    {
-        cout << "It's rather early. Which means it is the perfect time to get productive. Should " << firstName << " start doing something? (Y/N)" << endl;
-        cin >> choiceAM;
-        if (choiceAM == 'Y','y')
-        {
-            cout << "And so " << firstName << " started.. well.. " << verb << "ing even more " << adverb << " than before. I suppose that's how they have fun." << endl;
+    while (true)
+	{
+        //Questionare for variables that will be used
+        cout << " This story needs for you to finish it! Please complete the prompts." << endl;
+        cout << "What time is it? Please use military time /and/ the period/decimal instead of a colon. (ex: 13.58 is 1:58)" << endl;
+        //double
+        cin >> time;
+        //string
+        cout << "Please enter a name: " << endl;
+        cin >> firstName;
+        cout << "Please enter a type of weather (ex: snowy, sunny, windy..):" << endl;
+        cin >> weather;
+        cout << "Please enter an emotion: " << endl;
+        cin >> emotion;
+        cout << "Please enter a /singular/ verb (ex: run, sleep, play..): " << endl;
+        cin >> verb;
+        cout << "Please enter an adverb (ex: quickly, slowly, quietly..): " << endl;
+        cin >> adverb;
+        cout << "Finally, give me a number! " << endl;
+        //int
+        cin >> frequency;
+        if (frequency == 69) {
+            cout << "nice" << endl;
         }
-        else 
+        cout << "Thank you!" << endl;
+        cout << firstName << " is " << emotion << " today, as today is " << weather << "." << endl;
+        cout << weather << " days are perfect for " << verb << "ing, and on " << weather << " days, " << firstName << " is " << emotion << " to do so." << endl;
+        cout << firstName << " " << adverb << " " << verb << "s " << frequency << " time(s)." << endl;
+
+        //choice circumstances are dependent on the time entered previously
+        if (time < 12.00)
         {
-            cout << "Huh. Really? Alright. I can't change your mind." << endl;
+            cout << "It's rather early. Which means it is the perfect time to get productive. Should " << firstName << " start doing something? (Y/N)" << endl;
+            cin >> choiceAM;
+            if (choiceAM == 'Y', 'y')
+            {
+                cout << "And so " << firstName << " started.. well.. " << verb << "ing even more " << adverb << " than before. I suppose that's how they have fun." << endl;
+                cout << "Play again? (Y/N) (Please use lowercase)" << endl;
+                cin >> again;
+                if (again == 'n')
+                {
+                    break;
+                }
+            }
+            else
+            {
+                cout << "Huh. Really? Alright. I can't change your mind." << endl;
+                cout << "Play again? (Y/N) (Please use lowercase)" << endl;
+                cin >> again;
+                if (again == 'n')
+                {
+                    break;
+                }
+            }
         }
-    }
-    else if (time > 18.00) 
-    {
-        cout << "I'm certain " << firstName << " has had an enthralling time " << verb << "ing, but surely they're tired now? They should sleep, yeah? (Y/N)" << endl;
-        cin >> choicePM;
-        if (choicePM == 'Y','y')
+        else if (time > 18.00)
         {
-            cout << "And so they have a peaceful sleep. " << endl;
+            cout << "I'm certain " << firstName << " has had an enthralling time " << verb << "ing, but surely they're tired now? They should sleep, yeah? (Y/N)" << endl;
+            cin >> choicePM;
+            if (choicePM == 'Y', 'y')
+            {
+                cout << "And so they have a peaceful sleep. " << endl;
+                cout << "Play again? (Y/N) (Please use lowercase)" << endl;
+                cin >> again;
+                if (again == 'n')
+                {
+                    break;
+                }
+            }
+            else
+            {
+                cout << firstName << "'s head is going to HURT later, but it's a personal choice." << endl;
+                cout << "Play again? (Y/N) (Please use lowercase)" << endl;
+                cin >> again;
+                if (again == 'n')
+                {
+                    break;
+                }
+            }
         }
         else
         {
-            cout << firstName << "'s head is going to HURT later, but it's a personal choice." << endl;
+            cout << "It's lunchtime, prime time to get something to eat. Should " << firstName << " get something to eat? (Y/N)" << endl;
+            cin >> choiceAfterNoon;
+            if (choiceAfterNoon == 'Y', 'y')
+            {
+                cout << "And what a lovely meal they have. " << endl;
+                cout << "Play again? (Y/N) (Please use lowercase)" << endl;
+                cin >> again;
+                if (again == 'n')
+                {
+                    break;
+                }
+
+            }
+            else
+            {
+                cout << "That isn't really healthy. They should have something. If they're nauseous, a bit of salt can help with that. " << endl;
+                cout << "Play again? (Y/N) (Please use lowercase)" << endl;
+                cin >> again;
+                if (again == 'n')
+                {
+                    break;
+                }
+            }
         }
-    }
-    else
-    {
-        cout << "It's lunchtime, prime time to get something to eat. Should " << firstName << " get something to eat? (Y/N)" << endl;
-        cin >> choiceAfterNoon;
-        if (choiceAfterNoon == 'Y','y')
-        {
-            cout << "And what a lovely meal they have. " << endl;
-        }
-        else
-        {
-            cout << "That isn't really healthy. They should have something. If they're nauseous, a bit of salt can help with that. " << endl;
-        }
-    }
+    } 
+    cout << "Have a swell day!" << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
