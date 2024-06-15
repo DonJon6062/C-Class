@@ -11,48 +11,48 @@ int main()
     //vars
     int guess;
     char playAgain;
-    //int answer;
+   
     //Array of professors 
-    string professorArray[10] = {"Dr.Brendly-Clark","Mr.Habib","Mrs.Crusoe","Mr.Hreshchyshyn","Mrs.Peters","Dr.Brokaw","Mr.Sinca-Williams","Dr.Pike","Mr.Clark","Mrs.Valenzuela"};
+    const int numProfessors = 20;
+    string professorArray[numProfessors] = {"Dr.Brendly-Clark","Mr.Habib","Mrs.Crusoe","Mr.Hreshchyshyn","Mrs.Peters","Dr.Brokaw","Mr.Sinca-Williams","Dr.Pike","Mr.Clark","Mrs.Valenzuela", "not there", "not there" , "not there" , "not there" , "not there" , "not there" , "not there" , "not there" , "not there" , "not there" };
+   
     for (int i = 0; i < 10; i++) 
     {
         cout << professorArray[i] << " " << endl;
     }
     while (true) 
     {
-        //ask user to guess professor
-        cout << "Enter a number between 1 and 10 to guess what professor will visit you!" << endl;
-        cin >> guess;
-        //random number generator picks professor
-        int answer = rand() % 10 + 1;
-        //compare values to see if user was right or wrong
-        if (guess != answer)
+        for (int i = 0; i < 10; i++)
         {
-            cout << "Better luck next time... the professor was " << answer << endl;
-            Beep(500, 1000);//hertz, milliseconds
-            cout << "The classroom part of the trip is over. Visit again? (Y/N) (Please use lowercase)" << endl;
-            cin >> playAgain;
-            if (playAgain == 'n')
+            //random number generator picks professor
+            int answer = rand() % numProfessors + 1;
+            string visitingProfessor = professorArray[answer];
+            //ask user to guess professor
+            cout << "Enter a number between 1 and 20 to guess what professor will visit you!" << endl;
+            cin >> guess;
+            //compare values to see if user was right or wrong
+            if (guess != answer)
             {
-                break;
+                cout << "Better luck next time... the professor was " << visitingProfessor << " in classroom " << answer << endl;
+                Beep(500, 1000);//hertz, milliseconds
+            }
+            else
+            {
+                cout << "Good job! you were right!" << endl;
+                Beep(500, 1000);//hertz, milliseconds
             }
         }
-        else
+        cout << "The classroom part of the trip is over. Visit again? (Y/N) (Please use lowercase)" << endl;
+        cin >> playAgain;
+        if (playAgain == 'n')
         {
-            cout << "Good job! you were right!" << endl;
-            Beep(500, 1000);//hertz, milliseconds
-            cout << "The classroom part of the trip is over. Visit again? (Y/N) (Please use lowercase)" << endl;
-            cin >> playAgain;
-            if (playAgain == 'n')
-            {
-                break;
-            }
+            break;
         }
     }
    
 
-    string thisString = "Hello!";
-    cout << "Original string." << thisString;
+    //string thisString = "Hello!";
+    //cout << "Original string." << thisString;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
