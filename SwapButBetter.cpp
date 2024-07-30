@@ -9,7 +9,7 @@
 #include <algorithm>
 
 using namespace std;
-
+//first data type, interger
 void modifyValue(int* a, int*b);
 
 void modifyValue(int* a, int* b)
@@ -18,7 +18,7 @@ void modifyValue(int* a, int* b)
     *a = *b;
     *b = temp;
 }
-
+//second data type, string
 void modifyWord(string* a, string* b);
 
 void modifyWord(string* a, string* b)
@@ -32,21 +32,23 @@ void modifyWord(string* a, string* b)
 
 int main()
 {
+    //for selections
     int choice;
     int secondChoice;
     char playAgain;
-
+    //var ints
     int numUn;
     int numDeux;
-
+    //var strings
     string first; 
     string second;
 
     while (true)
     {
-
+        //first prompt
         cout << "Enter a number." << endl;
         cin >> numUn;
+        //second prompt
         cout << "Enter another number." << endl;
         cin >> numDeux;
         cout << "You entered " << numUn << " and " << numDeux <<  endl;
@@ -55,6 +57,7 @@ int main()
         cin >> choice;
         if (choice == 1)
         {
+            //swap em
             modifyValue(&numUn, &numDeux);
             cout << "Now the first value is " << numUn << endl;
             cout << "And the second value is " << numDeux << endl;
@@ -73,8 +76,10 @@ int main()
                 }
             }
         }
+        //string prompt
         cout << "Enter a color." << endl;
         cin >> first;
+        //second string prompt
         cout << "Enter a shape." << endl;
         cin >> second;
         cout << "You entered " << first << " and " << second << endl;
@@ -83,6 +88,7 @@ int main()
         cin >> secondChoice;
         if (secondChoice == 1)
         {
+            //swap words
             modifyWord(&first, &second);
             cout << "Now the first value is " << first << endl;
             cout << "And the second value is " << second << endl;
@@ -101,6 +107,7 @@ int main()
                 }
             }
         }
+        //replay check
         cout << "Do it again? Y or N." << endl;
         cin >> playAgain;
         if (playAgain == 'N')
