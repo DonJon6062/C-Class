@@ -1,5 +1,4 @@
 #pragma once
-//using std::endl;
 using namespace std;
 
 //the signifier of your limited tries
@@ -12,6 +11,8 @@ bool day5 = false;
 bool day6 = false;
 bool day7 = false;
 
+//what days #s take you to
+string daysToTravel[7] = { "Monday - 1 ", "Tuesday - 2 ", "Wednesday - 3 ", "Thursday - 4 ", "Friday - 5 ", "Saturday - 6 ", "Sunday - 7 " };
 
 //an extensive list of the acts structure
 void beginning();
@@ -26,7 +27,6 @@ void Finale();
 
 void check(); //small function that shows global int
 void choice(); //the meat and potatoes of choices
-void playAgain();//checks to see if the player is going again
 
 void check()
 {
@@ -53,7 +53,11 @@ void choice()
 		}
 		else if (select == 'T')
 		{
-			cout << "How many days back? 1-7; Pick 1 for yesterday, and 7 for the beginning of the week." << endl; //instructions
+			for (int i = 0; i < 7; i++)
+			{
+				cout << daysToTravel[i] << endl;
+			}
+			cout << "How many days back?  Please enter a number from 1-7." << endl; //instructions
 			cin >> daySelect; //aptly named functions and variable
 			if (daySelect == 1)
 			{
@@ -124,7 +128,7 @@ void dayOne() //if one is seleted; subtracts from the global variable once it ha
 		cout << "Time traveller you was rummaging through present you's own belongings until present you walked in, then time traveller you let out a shrill cry before dissappearing." << endl;
 		cout << "You were kind of scared after that. Who wouldn't be? Seeing another you scream and become nothing." << endl;
 		cout << "Now, the time traveler rather than the time travel..-ee? That was funny, to scare yourself. You do it again when past you walks in." << endl;
-		cout << "Unfortunately, nothing of note other than /a/ card, giving the name of your friend, Francis. Not enough info yet.." << endl;
+		cout << "Unfortunately, nothing of note other than a card, giving the name of your friend, Francis. Not enough info yet.." << endl;
 		if (outOfTime > -1)
 		{
 			outOfTime -= 1;
@@ -146,8 +150,8 @@ void dayTwo()  //points user to day four, a failsafe in the beginning to ensure 
 		cout << "The day of The Incident, aka the Baby Duck Rescue of two days ago. " << endl;
 		cout << "You weren't in the house then, and as such, you can turn the place inside out. " << endl;
 		cout << "You did wonder if yu had misplaced your things when you got back, but now you see, it's future shenanigans. " << endl;
-		cout << "You disvover the remnants of what was, once, a rather important looking piece of cardstock, now eaten by one of your friends' dogs. " << endl;
-		cout << "If your memory serves you, the dog came over and tore it to shreds two days ago. " << endl;
+		cout << "You disvover the remnants of what was, once, a rather important looking piece of paper, now eaten by one of your friends' dogs. " << endl;
+		cout << "If your memory serves you, the dog came over and tore it to shreds the day before. " << endl;
 		if (outOfTime > -1)
 		{
 			outOfTime -= 1;
@@ -256,7 +260,7 @@ void daySeven() //the answer
 		cout << "You look at the calendar that you used as kindling the next day. Smores are good, and it's the end of the year!" << endl;
 		cout << "You removed the staples, too. Only paper went in. " << endl;
 		cout << "the urge to facepalm overwhelms you. really??? " << endl;
-		cout << "Written right on current day, Francis' birthday. How could you forget!?? " << endl;
+		cout << "Written right on current day, 'Party!' You feel like you know what it is..." << endl;
 		if (outOfTime > -1)
 		{
 			outOfTime -= 1;
@@ -268,45 +272,65 @@ void daySeven() //the answer
 
 void Finale() //resolution; going to add a check to see what numbers have been selected (using booleans) and from there offer clues rather than stating the fact.
 {
+	string whatYouForgot;
+
+	Beep(500, 1000);
+	Beep(500, 1000);
+	Beep(500, 1000); 
+
 	cout << "Drats! Time isn't on your side. Now you're being booted back to current day.." << endl;
 	cout << "Your head spins as you return to current day, your house. Rapid fire time travel doesn't feel good.." << endl;
 	cout << "With your evidence, what is happening today? " << endl;
 	if (day7 == true) //get it to stop saying 7 is true after the fact
 	{
-		cout << "Well, now you know you know. It's Francis' birthday!" << endl;
+		cout << "Well, there's a party happening." << endl;
 	}
 	else
 	{
 		if (day1 == true)
 		{
-			cout << "You saw a decorative card..." << endl;
+			cout << "You saw a decorative card..." << endl; //day one hint
 		}
 		if (day2 == true)
 		{
 			if (day4 == true)
 			{
-				cout << "You saw what that paper was, thankfully." << endl;
+				cout << "You saw what that paper was, thankfully." << endl; //day four hint
 			}
 			else
 			{
-				cout << "Some paper shreds... " << endl;
+				cout << "Some paper shreds... " << endl; //day two hint
 			}
 		}
 		if (day3 == true)
 		{
-			cout << "Gift wrapping that you bought..." << endl;
+			cout << "Gift wrapping that you bought..." << endl; //day three hint
 		}
 		if (day4 == true)
 		{
-			cout << "A recipie for some pastry..." << endl;
+			cout << "A recipie for some pastry..." << endl; //day four hint
 		}
 		if (day5 == true)
 		{
-			cout << "A gift, presumably, based on what it was, for Francis..." << endl;
+			cout << "A gift, presumably, for Francis..." << endl; //day five hint
 		}
 		if (day6 == true)
 		{
-			cout << "Some plans for some event being made..." << endl;
+			cout << "Some plans for some event being made..." << endl; //day six hint
+		}
+		cout << "So, what event was today?" << endl;
+		cin >> whatYouForgot;
+		if (whatYouForgot == "birthday" || whatYouForgot == "Birthday" || whatYouForgot == "birthday party" || whatYouForgot == "Birthday party" || whatYouForgot == "Birthday Party" || whatYouForgot == "BIRTHDAY" || whatYouForgot == "BIRTHDAY PARTY")
+		{
+			cout << "How could you forget! Time to get ready!" << endl;
+		}
+		else 
+		{
+			if (whatYouForgot != "birthday" || whatYouForgot != "Birthday" || whatYouForgot != "birthday party" || whatYouForgot != "Birthday party" || whatYouForgot != "Birthday Party" || whatYouForgot != "BIRTHDAY" || whatYouForgot != "BIRTHDAY PARTY")
+			{
+				cout << "Not quite..." << endl;
+				cin >> whatYouForgot;
+			}
 		}
 	}
 }

@@ -5,36 +5,47 @@
 #include <windows.h>
 #include <fstream>
 #include "Header.h"
-//using std::endl;
 using namespace std;
 
 int main()
 {
+	//variable used to see if the game will be played again
 	char again;
 
 	while (true) //due to a 'while' loop being used, the 'play again' question has to be within main()
 	{
-		while (outOfTime > 0)
+		while (outOfTime > 0) //makes sure the player has more than one charge
 		{
-			beginning();
+			beginning(); //start the game with the intro
 		}
 		//restart code
 		cout << "Play again? Y or N" << endl;
 		cin >> again;
 		if (again == 'N')
 		{
+			//stop loop
 			break;
 		}
 		if (again == 'n')
 		{
+			//stop loop
 			break;
 		}
 		else if (again == 'Y')
 		{
+			//reset the booleans for all days; set charges to 3
 			outOfTime = 3;
+			day1 = false;
+			day2 = false;
+			day3 = false;
+			day4 = false;
+			day5 = false;
+			day6 = false;
+			day7 = false;
 		}
 		else if (again == 'y')
 		{
+			//reset the booleans for all days; set charges to 3
 			outOfTime = 3;
 			day1 = false;
 			day2 = false;
@@ -46,6 +57,7 @@ int main()
 		}
 		else
 		{
+			//tells user what to do
 			cout << "Please use Y or N!" << endl;
 		}
 	}
