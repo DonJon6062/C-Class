@@ -255,7 +255,12 @@ int main()
 #pragma endregion
 }
 
+void printPtr();
 
+void printPtr()
+{
+	cout << foe->pocketSand(foeAccuracy); << endl;
+}
 
 //Requirements
 
