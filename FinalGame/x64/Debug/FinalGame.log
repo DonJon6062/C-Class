@@ -1,0 +1,18 @@
+﻿  FinalGame.cpp
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(125,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(144,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(166,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(167,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(171,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(287,41): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(307,43): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(327,39): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(340,41): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(471,43): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(485,43): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(500,45): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(515,45): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(613,43): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(637,45): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\FinalGame\FinalGame.cpp(674,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  FinalGame.vcxproj -> C:\Users\donjo\Documents\Visual Studio 2022\FinalGame\x64\Debug\FinalGame.exe
