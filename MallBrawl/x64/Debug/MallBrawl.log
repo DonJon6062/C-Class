@@ -1,0 +1,9 @@
+﻿  MallBrawl.cpp
+C:\Users\donjo\Documents\Visual Studio 2022\MallBrawl\MallBrawl\MallBrawl.cpp(89,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\MallBrawl\MallBrawl\MallBrawl.cpp(108,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\MallBrawl\MallBrawl\MallBrawl.cpp(160,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\MallBrawl\MallBrawl\MallBrawl.cpp(178,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\MallBrawl\MallBrawl\MallBrawl.cpp(191,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\MallBrawl\MallBrawl\MallBrawl.cpp(232,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\donjo\Documents\Visual Studio 2022\MallBrawl\MallBrawl\MallBrawl.cpp(290,27): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  MallBrawl.vcxproj -> C:\Users\donjo\Documents\Visual Studio 2022\MallBrawl\x64\Debug\MallBrawl.exe
